@@ -44,8 +44,8 @@ class Menu extends Component {
     render() {
         return (
             <div className='menu'>
-                {this.state.sections.map(({ title, imageUrl, id,size }) => (
-                    <MenuItem key={id} title={title} img={imageUrl} size={size}/>
+                {this.state.sections.map(({ id, ...other}) => (
+                    <MenuItem key={id}  {...other}/>
                 ))};
             </div>);
     }
